@@ -1,0 +1,12 @@
+function  insertionSort ( sortedArray)  {
+  
+
+    for (   i = 1 ;  i < sortedArray . longueur ;  i ++ )
+        pour (   j = i ;  j > 0 ;  j -- )
+            si (  sortedArray[ j - 1 ]  >  sortedArray [ j ]  ) alors
+                [ sortedArray [ j ] ,  sortedArray [ j - 1 ] ] =  [ sortedArray [ j - 1 ] ,  sortedArray [ j ] ] ;
+           
+
+    return  sortedArray ;
+}
+

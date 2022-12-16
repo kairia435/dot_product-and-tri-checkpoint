@@ -1,0 +1,41 @@
+FONCTION dot_product(v1,v2 : ARRAY_OF INTEGER[100]) : ENTIER
+VAR
+    ps,i : ENTIER := 0;
+COMMENCER
+
+    SI(v1.longueur = v2.longueur) ALORS
+        POUR i DE 0 À v1.longueur FAIRE
+            ps := ps + v1[i] * v2[i] ;
+        END_FOR
+        RETURN ps ;
+    AUTRE
+        Write("La longueur du vecteur v1 n'est pas égale a la longueur du vecteur v2");
+        RETURN pas du resultat
+    FIN SI
+FIN
+
+ALGORITHME DOT_PRODUCT
+VAR
+    V1,V2 : ARRAY_OF INTEGER[100] ;
+    ps,n1,n2,i : ENTIER := 0 ;
+COMMENCER
+    Write("Veuillez saisir la taille du premier vecteur (la taille maximale est de 100)");
+    Lire(n1);
+    FOR i DE 0 A n1 FAIRE
+        Lire(V1[i])
+    END_FOR
+
+    Write("Veuillez saisir la taille du second vecteur (la taille maximale est de 100)");
+    Lire(n2);
+    FOR i DE 0 A n2 FAIRE
+        Lire(V2[i])
+    END_FOR
+
+    ps :=dot_product(V1,V2);
+
+    SI (ps = 0) ALORS
+        Write("V1 et V2 sont orthogonaux");
+    AUTRE
+        Write("V1 et V2 ne sont pas orthogonaux");
+    FIN SI
+FIN
